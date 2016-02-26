@@ -4,58 +4,63 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.springframework</groupId>
-	<artifactId>spring-tuple</artifactId>
-	<packaging>jar</packaging>
+	<artifactId>spring-tuple-parent</artifactId>
+	<packaging>pom</packaging>
 	<version>1.0.0.BUILD-SNAPSHOT</version>
-	<name>spring-tuple</name>
-	<description>Spring Tuple</description>
+	<name>spring-tuple-parent</name>
+	<description>Spring Tuple Project</description>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.7</java.version>
-		<spring.framework.version>4.2.4.RELEASE</spring.framework.version>
-		<spring.integration.version>4.2.4.RELEASE</spring.integration.version>
-		<spring.boot.version>1.3.2.RELEASE</spring.boot.version>
-	</properties>
+	<!--<properties>-->
+		<!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+		<!--<java.version>1.7</java.version>-->
+		<!--<spring.framework.version>4.2.4.RELEASE</spring.framework.version>-->
+		<!--<spring.boot.version>1.3.2.RELEASE</spring.boot.version>-->
+		<!--<kryo.version>3.0.3</kryo.version>-->
+		<!--<jackson.version>2.6.5</jackson.version>-->
+		<!--<spring.batch.version>3.0.6.RELEASE</spring.batch.version>-->
+		<!--<spring.jdbc.version>4.1.6.RELEASE</spring.jdbc.version>-->
+	<!--</properties>-->
 
-	<dependencies>
-		<dependency>
-			<groupId>com.esotericsoftware</groupId>
-			<artifactId>kryo-shaded</artifactId>
-			<version>3.0.3</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${spring.framework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.6.5</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${spring.framework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.integration</groupId>
-			<artifactId>spring-integration-core</artifactId>
-			<version>${spring.integration.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-logging</artifactId>
-			<version>${spring.boot.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<version>${spring.boot.version}</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+	<modules>
+		<module>spring-tuple</module>
+		<module>spring-integration-tuple</module>
+		<module>spring-batch-tuple</module>
+	</modules>
+	<!--<dependencyManagement>-->
+		<!--<dependencies>-->
+			<!--<dependency>-->
+				<!--<groupId>com.esotericsoftware</groupId>-->
+				<!--<artifactId>kryo-shaded</artifactId>-->
+				<!--<version>${kryo.version}</version>-->
+			<!--</dependency>-->
+			<!--<dependency>-->
+				<!--<groupId>org.springframework</groupId>-->
+				<!--<artifactId>spring-core</artifactId>-->
+				<!--<version>${spring.framework.version}</version>-->
+			<!--</dependency>-->
+			<!--<dependency>-->
+				<!--<groupId>com.fasterxml.jackson.core</groupId>-->
+				<!--<artifactId>jackson-databind</artifactId>-->
+				<!--<version>${jackson.version}</version>-->
+			<!--</dependency>-->
+			<!--<dependency>-->
+				<!--<groupId>org.springframework</groupId>-->
+				<!--<artifactId>spring-context</artifactId>-->
+				<!--<version>${spring.framework.version}</version>-->
+			<!--</dependency>-->
+			<!--<dependency>-->
+				<!--<groupId>org.springframework</groupId>-->
+				<!--<artifactId>spring-jdbc</artifactId>-->
+				<!--<version>4.1.6.RELEASE</version>-->
+			<!--</dependency>-->
+			<!--<dependency>-->
+				<!--<groupId>org.springframework.boot</groupId>-->
+				<!--<artifactId>spring-boot-starter-test</artifactId>-->
+				<!--<version>${spring.boot.version}</version>-->
+				<!--<scope>test</scope>-->
+			<!--</dependency>-->
+		<!--</dependencies>-->
+	<!--</dependencyManagement>-->
 	<build>
 		<pluginManagement>
 			<plugins>
